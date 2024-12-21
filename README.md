@@ -29,7 +29,7 @@ This is related to Apple's strict code signing restrictions. We are getting set 
 Until this is resolved, you can manually flag the launcher as safe with `xattr` and it will run.:
 
 ```zsh
-xattr -cr /Applications/Invoke-Installer.app
+xattr -d 'com.apple.quarantine' /Applications/Invoke-Installer.app
 ```
 
 ### Compared to the "old" install/invoke scripts
